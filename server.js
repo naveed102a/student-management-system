@@ -14,14 +14,14 @@ app.use(express.static('public')); // HTML, CSS, JS files yahan se serve hongi
 
 // ---------- DATABASE CONNECTION ----------
 // Neeche apni PostgreSQL details daalein (user, password wagera)
-const pool = new Pool({
-    user: 'postgres',            // apka postgres username
-    host: 'localhost',
-    database: 'student_management', // database ka naam
-    password: 'Naveed2129',   // apna postgres password yahan likhein
-    port: 5432,
-});
+const { Pool } = require('pg');
 
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
 // ---------- ROUTES (API) ----------
 
 // 1) Sab students get karo
