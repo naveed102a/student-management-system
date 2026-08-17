@@ -66,8 +66,4 @@ student-management-system/
     └── script.js       → frontend logic (add/edit/delete ke liye fetch calls)
 ```
 
-## Assignment me kya explain karna hai (agar demo/viva ho)
-- **Frontend (HTML/CSS/JS):** form aur table dikhata hai, fetch() se backend API ko call karta hai
-- **Backend (Node.js + Express):** API routes banata hai (GET, POST, PUT, DELETE) jo database se baat karte hain
-- **Database (PostgreSQL):** ek `students` table jisme data store hota hai
-- Ye teeno mil kar ek simple **3-tier architecture** banate hain: Frontend → Backend API → Database
+
